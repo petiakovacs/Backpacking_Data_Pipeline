@@ -1,0 +1,17 @@
+{
+    "spending_file_path_local" : "data/raw_data/spending.xlsx",
+    "places_file_path_local" : "data/raw_data/travels.xlsx",
+    "spending_file_path" : "spending.xlsx",
+    "places_file_path" : "travels.xlsx",
+    "cleaned_spending_output_path" : "data/output_data/spending.csv",
+    "cleaned_places_output_path" : "data/output_data/places.csv",
+    "data_visualization_folder_path" : "data_visualization",
+    "spending_required_cols" : ["Title", "Date", "In EUR", "Category", "City", "Country"],
+    "places_required_cols" : ["Arrival_Date", "Nights", "Country", "City", "Host_Name", "Couchsurfing_FLG"],
+    "missing_spending_output_path" : "data/output_data/missing_spending_data_output.csv",
+    "missing_places_output_path" : "data/output_data/missing_places_data_output.csv",
+    "missing_data_threshold" : 0.1,
+    "s3bucket" : "backpackingtrip",
+    "log_file_path_v1" : "logs/v1_log.log",
+    "log_file_path_v2" : "logs/v2_log.log"
+}

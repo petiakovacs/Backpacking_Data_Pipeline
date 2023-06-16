@@ -1,0 +1,26 @@
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+env/
+
+# Visual Studio Code files
+.vscode/
+
+# Compiled Python files
+*.pyc
+
+# Log files
+/logs/
+*.log
+
+# credentials
+/src/.env
+
+# output data
+/data/output_data/
+
+# data visualization exports
+data_visualization/

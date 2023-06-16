@@ -1,0 +1,9 @@
+pandas
+matplotlib
+openpyxl
+snowflake-connector-python[pandas]
+python-dotenv
+boto3
+sqlalchemy 
+psycopg2-binary
+pytest
