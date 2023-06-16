@@ -1,20 +1,37 @@
-# Backpacking Trip Data Engineering Project
+# WanderlustWisdom: Backpacking Data Pipeline
 
-[logo](./documentation/img/backpacking_data_pipeline.png)
+![logo](./documentation/img/backpacking_data_pipeline.png)
+
+- [Backpacking Trip Data Engineering Project](#backpacking-trip-data-engineering-project)
+  - [Data Structure](#data-structure)
+    - [Spending File](#spending-file)
+    - [Places File](#places-file)
+  - [Project Structure](#project-structure)
+    - [Data](#data)
+    - [Data Visualization](#data-visualization)
+    - [Documentation](#documentation)
+    - [Env](#env)
+    - [Plugins](#plugins)
+    - [Src](#src)
+    - [Tests](#tests)
+    - [Config.json](#configjson)
+    - [Requirements.txt](#requirementstxt)
+  - [Project Versions](#project-versions)
+    - [Version 1 (v1_DataProcessor)](#version-1-v1_dataprocessor)
+    - [Version 2 (v2_ETL)](#version-2-v2_etl)
+  - [Data Validation](#data-validation)
+  - [Error Handling](#error-handling)
+  - [Security](#security)
+  - [Getting Started](#getting-started)
+  - [Version Control](#version-control)
+  - [Future Improvements](#future-improvements)
+  - [Conclusion](#conclusion)
 
 This project is a personal endeavor to improve my data engineering skills. The main goal is to ingest, process, and analyze data from my solo backpacking trip. During the trip, I tracked my spendings and places visited using two separate Excel files: `spending.xlsx` and `travels.xlsx`.
 
-## Data Validation
-
-Data validation is a key feature of this project. It ensures the integrity and correctness of the data before it is processed. Specific details about how data validation is implemented can be found in the documentation for each version of the project.
-
-## Error Handling
-
-Robust error handling is implemented to ensure that the project can handle unexpected situations gracefully. More details about how errors are handled can be found in the documentation for each version of the project.
-
 ## Data Structure
 
-The data is structured in two Excel files as follows:
+The input data is structured in two Excel files as follows:
 
 ### Spending File
 
@@ -153,6 +170,14 @@ The project has two versions: v1 and v2. Each version represents a different app
 
 [![High level overview](./documentation/img/v2.png)](./documentation/v2_readme.md)
 
+## Data Validation
+
+Data validation is a key feature of this project. It ensures the integrity and correctness of the data before it is processed. Specific details about how data validation is implemented can be found in the documentation for each version of the project.
+
+## Error Handling
+
+Robust error handling is implemented to ensure that the project can handle unexpected situations gracefully. More details about how errors are handled can be found in the documentation for each version of the project.
+
 ## Security
 
 Sensitive login information is stored in a `.env` file located in the `src` directory. This file is not included in the version control system, as specified in the `.gitignore` file. Here is a sample of its content:
@@ -171,14 +196,6 @@ POSTGRES_DB_LINK = ''
 
 Please replace the empty strings with your actual credentials.
 
-## Getting Started
-
-To set up and run this project, you will need to:
-
-1. Install Python.
-2. Set up a virtual environment.
-3. Install the dependencies listed in the `requirements.txt` file using the command `pip install -r requirements.txt`.
-
 ## Version Control
 
 This project uses Git for version control. To contribute, you can clone the repository, create a new branch, make your changes, and then commit and push your changes to the repository.
@@ -186,6 +203,14 @@ This project uses Git for version control. To contribute, you can clone the repo
 ## Future Improvements
 
 In the future, I plan to add more complex and interactive data visualizations to help users better understand the data.
+
+## Getting Started
+
+To set up and run this project, you will need to:
+
+1. Install Python.
+2. Set up a virtual environment.
+3. Install the dependencies listed in the `requirements.txt` file using the command `pip install -r requirements.txt`.
 
 ## Conclusion
 
