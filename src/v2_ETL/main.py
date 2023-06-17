@@ -6,8 +6,11 @@ from extract import DataExtractor, DataLoadingError
 from transform import DataTransformer, DataValidationError, DataCleaningError
 from load import DataLoader, DataExportError
 from dotenv import load_dotenv
+from postgres_create_tables import TableCreator
+
 import os
 import pandas as pd
+
 
 def main():
 
@@ -84,6 +87,14 @@ def main():
         logging.error(str(e))
         return
     
+    try:
+        # Create table objects
+        table_creator = TableCreator()
+        table_creator.create_tables()
+    except Exception as e:
+        logging.error(f"An error occured while creating the tables in the postgres database: {e}")
+        return
+
       # Load data into database
     try:
         loader.load_data_to_db(schema='public')

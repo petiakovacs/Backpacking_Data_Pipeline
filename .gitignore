@@ -6,9 +6,6 @@ __pycache__/
 # Virtual environment
 env/
 
-# Visual Studio Code files
-.vscode/
-
 # Compiled Python files
 *.pyc
 
@@ -20,7 +17,7 @@ env/
 /src/.env
 
 # output data
-/data/output_data/
+/data/output_data/*
 
 # data visualization exports
-data_visualization/
+data_visualization/*

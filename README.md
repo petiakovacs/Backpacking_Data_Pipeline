@@ -27,7 +27,7 @@
   - [Future Improvements](#future-improvements)
   - [Conclusion](#conclusion)
 
-This project is a personal endeavor to improve my data engineering skills. The main goal is to ingest, process, and analyze data from my solo backpacking trip. During the trip, I tracked my spendings and places visited using two separate Excel files: `spending.xlsx` and `travels.xlsx`.
+This project is a personal endeavor to improve my data engineering skills. The main goal is to ingest, process, and analyze data from my solo backpacking / couchsurfing trip. During the trip, I tracked my spendings and places visited using two separate Excel files: `spending.xlsx` and `travels.xlsx`.
 
 ## Data Structure
 
@@ -162,11 +162,11 @@ pytest
 
 The project has two versions: v1 and v2. Each version represents a different approach to data processing. Detailed documentation for each version can be found by clicking on the `images`.
 
-### [Version 1 (v1_DataProcessor)](./documentation/v1_readme.md)
+### [Version 1 (v1_DataProcessor) (CLICK)](./documentation/v1_readme.md)
 
 [![High level overview](./documentation/img/v1.png)](./documentation/v1_readme.md)
 
-### [Version 2 (v2_ETL)](./documentation/v2_readme.md)
+### [Version 2 (v2_ETL) (CLICK)](./documentation/v2_readme.md)
 
 [![High level overview](./documentation/img/v2.png)](./documentation/v2_readme.md)
 
