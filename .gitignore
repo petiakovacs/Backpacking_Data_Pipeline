@@ -10,8 +10,7 @@ env/
 *.pyc
 
 # Log files
-/logs/
-*.log
+/logs/*
 
 # credentials
 /src/.env
@@ -21,3 +20,4 @@ env/
 
 # data visualization exports
 data_visualization/*
+

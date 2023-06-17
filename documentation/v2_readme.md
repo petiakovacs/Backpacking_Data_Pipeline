@@ -4,6 +4,8 @@
 
 The second version of the project is a streamlined data pipeline that includes data extraction from **AWS S3**, data transformation (cleaning and validation), and loading the data into a **AWS RDS PostgreSQL** database. The pipeline is divided into several Python scripts, each handling a specific part of the pipeline.
 
+![Picture](./img/v2.png)
+
 ## Data Extraction (`extract.py`)
 
 This script is responsible for loading data from AWS S3. It uses the `DataExtractor` class to perform these tasks.

@@ -2,9 +2,9 @@
  
 import logging
 import json
+import os
 import data_processor, data_analyzer, data_visualizer
 import snowflake_manager, snowflake_view_creator
-
 
 def main () -> None:
 

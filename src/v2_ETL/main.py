@@ -11,7 +11,6 @@ from postgres_create_tables import TableCreator
 import os
 import pandas as pd
 
-
 def main():
 
     # Load the config file

@@ -5,7 +5,7 @@
     "places_file_path" : "travels.xlsx",
     "cleaned_spending_output_path" : "data/output_data/spending.csv",
     "cleaned_places_output_path" : "data/output_data/places.csv",
-    "data_visualization_folder_path" : "data_visualization",
+    "data_visualization_folder_path" : "data_visualization/",
     "spending_required_cols" : ["Title", "Date", "In EUR", "Category", "City", "Country"],
     "places_required_cols" : ["Arrival_Date", "Nights", "Country", "City", "Host_Name", "Couchsurfing_FLG"],
     "missing_spending_output_path" : "data/output_data/missing_spending_data_output.csv",

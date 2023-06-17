@@ -124,7 +124,7 @@ Data cleaning is performed by the `DataProcessor` class. This includes handling 
 
 The following image provide a visual representation of the data pipeline:
 
-[Overall Flow of the Project](./img/v1.png)
+![Overall Flow of the Project](./img/v1.png)
 
 The image was created using draw.io and provide a clear and concise overview of the project's structure and flow.
 

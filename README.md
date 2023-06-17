@@ -11,7 +11,6 @@
     - [Data Visualization](#data-visualization)
     - [Documentation](#documentation)
     - [Env](#env)
-    - [Plugins](#plugins)
     - [Src](#src)
     - [Tests](#tests)
     - [Config.json](#configjson)
@@ -108,10 +107,6 @@ This directory contains detailed documentation about the different versions of t
 
 This directory contains the virtual environment files.
 
-### Plugins
-
-This directory contains any plugins used in the project.
-
 ### Src
 
 This directory contains the source code for the project. It is divided into two subdirectories: `v1_DataProcessor` and `v2_ETL`, each containing the source Python files for the respective version of the project. The `.env` file containing sensitive login information is also located in this directory.
@@ -162,11 +157,15 @@ pytest
 
 The project has two versions: v1 and v2. Each version represents a different approach to data processing. Detailed documentation for each version can be found by clicking on the `images`.
 
-### [Version 1 (v1_DataProcessor) (CLICK)](./documentation/v1_readme.md)
+### Version 1 (v1_DataProcessor)
+
+[(CLICK)](./documentation/v1_readme.md)
 
 [![High level overview](./documentation/img/v1.png)](./documentation/v1_readme.md)
 
-### [Version 2 (v2_ETL) (CLICK)](./documentation/v2_readme.md)
+### Version 2 (v2_ETL)
+
+[(CLICK)](./documentation/v2_readme.md)
 
 [![High level overview](./documentation/img/v2.png)](./documentation/v2_readme.md)
 
@@ -211,6 +210,14 @@ To set up and run this project, you will need to:
 1. Install Python.
 2. Set up a virtual environment.
 3. Install the dependencies listed in the `requirements.txt` file using the command `pip install -r requirements.txt`.
+4. Run manually the python code `check_and_create_folders.py` from the `src` fodler to ensure that all necessary folders are created in the project.
+
+### check_and_create_folders.py
+
+This function checks for the existence of necessary folders as specified in a configuration file,
+and creates them if they do not exist. This is useful when a project is pulled from a git repository
+and the necessary folders are not included in the repository, but are required for the successful
+execution of the project.
 
 ## Conclusion
 
