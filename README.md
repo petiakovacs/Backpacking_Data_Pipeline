@@ -2,7 +2,9 @@
 
 ![logo](./documentation/img/backpacking_data_pipeline.png)
 
-- [Backpacking Trip Data Engineering Project](#backpacking-trip-data-engineering-project)
+## Table of Contents
+
+- [WanderlustWisdom: Backpacking Data Pipeline](#wanderlustwisdom-backpacking-data-pipeline)
   - [Data Structure](#data-structure)
     - [Spending File](#spending-file)
     - [Places File](#places-file)
@@ -22,6 +24,8 @@
   - [Error Handling](#error-handling)
   - [Security](#security)
   - [Getting Started](#getting-started)
+    - [check_and_create_folders.py](#check_and_create_folderspy)
+  - [Dockerization](#dockerization)
   - [Version Control](#version-control)
   - [Future Improvements](#future-improvements)
   - [Conclusion](#conclusion)
@@ -195,14 +199,6 @@ POSTGRES_DB_LINK = ''
 
 Please replace the empty strings with your actual credentials.
 
-## Version Control
-
-This project uses Git for version control. To contribute, you can clone the repository, create a new branch, make your changes, and then commit and push your changes to the repository.
-
-## Future Improvements
-
-In the future, I plan to add more complex and interactive data visualizations to help users better understand the data.
-
 ## Getting Started
 
 To set up and run this project, you will need to:
@@ -218,6 +214,52 @@ This function checks for the existence of necessary folders as specified in a co
 and creates them if they do not exist. This is useful when a project is pulled from a git repository
 and the necessary folders are not included in the repository, but are required for the successful
 execution of the project.
+
+## Dockerization
+
+This project has been dockerized to simplify the setup and execution process. The Dockerfile for each version of the project is located in the root of the project directory and named as `Dockerfile.v1` and `Dockerfile.v2` respectively.
+
+To build the Docker image for a version, navigate to the directory containing the Dockerfile and run the following command:
+
+```bash
+docker build -t backpacking_data_pipeline:v1 -f Dockerfile.v1 .
+```
+
+Replace `v1` with `v2` and `Dockerfile.v1` with `Dockerfile.v2` if you're building the Docker image for the second version of the project.
+
+Once the Docker image is built, you can run it using the following command:
+
+```bash
+docker run -p 4000:80 backpacking_data_pipeline:v1
+```
+
+Again, replace `v1` with `v2` if you're running the Docker image for the second version of the project.
+
+The Docker container will run the data pipeline and then exit. The logs of the application are written to a file inside the Docker container. To copy the exited docker container id, run:
+
+```bash
+docker ps -a
+```
+
+To copy the log file from the Docker container to your host machine, you can use the `docker cp` command:
+
+```bash
+docker cp <container_id>:app/logs/v1_log.log <locatio_to_copy>
+```
+
+```bash
+docker cp <container_id>:app/logs/v2_log.log <locatio_to_copy>
+```
+
+Replace `<container_id>` with the actual ID of your Docker container and `<locatio_to_copy>` to the directory path on your host. This command will copy the `v1_log.log` or `v2_log.log` file from the Docker container to the given directory on your host machine. You can then inspect this file to check the logs of the application.
+
+## Version Control
+
+This project uses Git for version control. To contribute, you can clone the repository, create a new branch, make your changes, and then commit and push your changes to the repository.
+
+## Future Improvements
+
+In the future, I plan to add more complex and interactive data visualizations to help users better understand the data.
 
 ## Conclusion
 
