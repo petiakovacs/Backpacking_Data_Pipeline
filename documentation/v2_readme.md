@@ -57,15 +57,29 @@ This script loads the cleaned and validated data into a PostgreSQL database. It 
 - `export_data(export_validated=False, export_missing=True)`: Exports the cleaned and missing data to the given output paths.
 - `load_data_to_db(schema)`: Loads the cleaned data into the database.
 
+## Table Creation (postgres_create_tables.py)
+
+This script is responsible for creating the necessary tables in the PostgreSQL database. It uses the `TableCreator` class to create the tables.
+
+### Class: TableCreator
+
+#### Parameters:
+
+- None
+
+#### Methods:
+
+- `create_tables()`: Creates the tables in the PostgreSQL database.
+
 ## Main Script (`main.py`)
 
 This is the main script that runs the entire pipeline. It calls the main function from each of the other scripts in order. If an error occurs during the execution of any script, it is logged and the pipeline is halted.
 
-### **Error Handling**: 
+### **Error Handling**
 
 The script includes error handling for each step of the pipeline. If an error is raised during the execution of a script, it is caught, logged, and the pipeline is stopped.
 
-### **Execution**: 
+### **Execution**
 
 The script executes each step of the pipeline in order, calling the main function from each script. If a script returns an error, the pipeline is halted and the error is logged.
 

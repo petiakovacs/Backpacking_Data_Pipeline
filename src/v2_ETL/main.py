@@ -80,6 +80,15 @@ def main():
 
     # Load validated data / missing data into csv files
     loader = DataLoader(validated_data=validated_data,missing_data=missing_data,output_paths=output_paths, missing_data_output_paths=missing_data_output_paths, db_link=db_link )
+
+    try:
+        # Create table objects
+        table_creator = TableCreator()
+        table_creator.create_tables()
+    except Exception as e:
+        logging.error(f"An error occurred while creating the tables in the PostgreSQL database: {e}")
+        return
+
     try:
         loader.export_data()
     except DataExportError as e:

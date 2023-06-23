@@ -91,8 +91,9 @@ The project is structured as follows:
 ├── tests
 ├── .gitignore
 ├── config.json
+├── Dockerfile.v1
+├── Dockerfile.v2
 └── requirements.txt
-
 ```
 
 ### Data
